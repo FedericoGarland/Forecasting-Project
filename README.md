@@ -2,4 +2,5 @@ The aim of this project was to forecast the prices of vegetables and determine t
 
 For this, Principal Component Analysis was used to identify the most important products and weather variables, and functions were created in R to find the best and most accurate forecasting models for the price of each product. The functions were designed to iterate through several models (ARIMA, ETS, Holt-Winters and TBATS) and hyperparameters in the case of ARIMA (looping through p, d, q, P, D, Q) and select the best model to produce forecasts by reducing the MAPE obtained through cross-validation (one step forecasts) and test set validation (multiple step forecasts). The forecasting process was incorporated into the ETL of a Power BI dashboard to display the forecasts in an interactive platform for the end user. 
 
-Please check the "Forecast Power BI dashboard" to see the final forecasting results. The rest of the README file is still to be completed.
+Please check the "Forecast Power BI dashboard" to see the final forecasting results. The rest of the README file is still to be completed. 
+- 
