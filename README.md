@@ -1,6 +1,121 @@
-The aim of this project was to forecast the prices of vegetables and determine the influence of weather conditions on those prices. Price forecasting provides value by allowing stakeholders like agricultural producers to better plan their campaigns and select profitable crops. Likewise, it allows for restaurants and consumers to plan and select the lowest costing vegetables in advance to satisfy their requirements
+# Automated Time Series Forecasting Pipeline for Commodity Prices (R, Power BI)
 
-For this, Principal Component Analysis was used to identify the most important products and weather variables, and functions were created in R to find the best and most accurate forecasting models for the price of each product. The functions were designed to iterate through several models (ARIMA, ETS, Holt-Winters and TBATS) and hyperparameters in the case of ARIMA (looping through p, d, q, P, D, Q) and select the best model to produce forecasts by reducing the MAPE obtained through cross-validation (one step forecasts) and test set validation (multiple step forecasts). The forecasting process was incorporated into the ETL of a Power BI dashboard to display the forecasts in an interactive platform for the end user. 
+## Overview
+End-to-end data science solution for forecasting vegetable prices and enabling data-driven commercial planning.
 
-Please check the "Forecast Power BI dashboard" to see the final forecasting results. The rest of the README file is still to be completed. 
-- 
+This project automates the selection, training and evaluation of time series forecasting models for multiple products, generating 12-month forecasts and integrating the results into a Power BI dashboard for business consumption.
+
+The solution evaluates multiple models (ARIMA, ETS, Holt-Winters, TBATS) and selects the best-performing one for each product based on forecasting accuracy (MAPE), ensuring robust and scalable predictions.
+
+---
+
+## Architecture
+
+### Forecasting Pipeline
+Raw Time Series Data → Model Selection (R) → Forecast Generation → Power Query ETL → Power BI Dashboard
+
+---
+
+## Dashboard
+
+![Forecast Dashboard](images/forecast_dashboard.png)
+
+The dashboard allows users to:
+- Visualize historical prices and forecasts
+- Compare model performance
+- Evaluate forecast uncertainty
+- Monitor expected price trends for decision-making
+
+---
+
+## Business Problem
+Agricultural price volatility makes planning difficult for:
+
+- Producers deciding which crops to grow  
+- Businesses planning procurement strategies  
+- Consumers optimizing purchasing decisions  
+
+Without reliable forecasting, decisions are reactive rather than proactive.
+
+---
+
+## Solution
+A fully automated forecasting pipeline was built to:
+
+- Evaluate multiple time series models per product  
+- Select the best model based on forecasting accuracy (MAPE)  
+- Generate 12-month forecasts  
+- Integrate predictions into a Power BI dashboard  
+- Enable continuous updates through ETL automation  
+
+---
+
+## Modeling Approach
+
+### Model Selection
+For each product, the pipeline:
+
+1. Iterates through multiple models:
+   - ARIMA (with hyperparameter tuning)
+   - ETS (Exponential Smoothing)
+   - Holt-Winters
+   - TBATS  
+
+2. Evaluates performance using:
+   - Cross-validation (one-step forecasts)
+   - Test set validation (multi-step forecasts)
+
+3. Selects the best model based on lowest MAPE
+
+---
+
+### Forecasting
+- Generates future price predictions (12 months)
+- Includes confidence intervals for uncertainty estimation
+- Produces comparable outputs across products
+
+---
+
+## Pipeline Flow
+1. Time series data is loaded into R  
+2. Models are trained and evaluated per product  
+3. Best model is selected based on accuracy  
+4. Forecasts are generated  
+5. Results are exported to Power BI via Power Query ETL  
+6. Dashboard is refreshed automatically  
+
+---
+
+## Tech Stack
+- R (Forecasting, Statistical Modeling)
+- Power BI (Visualization, Dashboarding)
+- Power Query / M (ETL Integration)
+- DAX
+- Time Series Forecasting
+- Cross-Validation
+
+---
+
+## Key Techniques
+- Automated model selection across multiple algorithms  
+- Hyperparameter tuning for ARIMA models  
+- Forecast evaluation using MAPE  
+- Integration of data science workflows into BI pipelines  
+- End-to-end automation of forecasting and reporting  
+
+---
+
+## Business Value
+This solution enables:
+
+- Proactive planning based on expected price movements  
+- Identification of high-volatility products  
+- Better procurement and production decisions  
+- Scalable forecasting across multiple products  
+
+---
+
+## 🔗 Links
+- 🚀 [Project Repository](https://github.com/FedericoGarland/Forecasting-Project)
+- 🌐 [Portfolio Website](https://federicogarland.github.io/FedericoGarlandWebsite/)
+- 💼 [LinkedIn Profile](https://www.linkedin.com/in/federico-garland/)
