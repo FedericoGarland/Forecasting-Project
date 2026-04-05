@@ -1,11 +1,20 @@
-# Automated Time Series Forecasting Pipeline for Commodity Prices (R, Power BI)
+# Automated Time Series Forecasting for Commodity Prices (R, Power BI)
 
 ## Overview
-End-to-end data science solution for forecasting vegetable prices and enabling data-driven commercial planning.
+Production-ready time series forecasting solution for commodity prices. Processes and models historical price data to enable scalable, automated forecasting and data-driven commercial planning.
 
-This project automates the selection, training and evaluation of time series forecasting models for multiple products, generating 12-month forecasts and integrating the results into a Power BI dashboard for business consumption.
+An end-to-end forecasting pipeline was designed and built to evaluate multiple time series models, select the best-performing one for each product and generate 12-month forecasts, delivering business-ready outputs through a Power BI dashboard.
 
-The solution evaluates multiple models (ARIMA, ETS, Holt-Winters, TBATS) and selects the best-performing one for each product based on forecasting accuracy (MAPE), ensuring robust and scalable predictions.
+The solution is fully automated, integrating model execution into a Power Query ETL pipeline to ensure consistent and up-to-date forecasting results for decision-making.
+
+Key components include:
+- Automated model selection across multiple algorithms (ARIMA, ETS, Holt-Winters, TBATS)
+- Hyperparameter tuning for ARIMA models
+- Forecast evaluation using cross-validation and test set validation (MAPE)
+- Generation of 12-month forecasts with comparable outputs across products
+- Integration of forecasting results into Power BI via Power Query ETL
+- Interactive dashboard for price monitoring and forward-looking decision-making
+- End-to-end automation of the forecasting and reporting workflow
 
 ---
 
